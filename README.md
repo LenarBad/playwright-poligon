@@ -22,14 +22,12 @@ Open <http://localhost:4173>.
 - `ta_auth`
 - `ta_cart`
 - `ta_ui`
-- `ta_seed_version`
 
 ## Utility for tests
 
-- `window.__TA_RESET__()` resets the app state.
 - `window.__TA_VERSION__` contains app version.
 
 ## GitHub Pages
 
-Publish the `training-app/` directory as static content in GitHub Pages.
+Publish the repository root as static content in GitHub Pages.
 Use resulting URL in Playwright Java tests as `baseURL`.

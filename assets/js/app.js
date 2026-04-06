@@ -1,4 +1,4 @@
-import { ensureSeedState, getAuth, getCartCount, resetState } from "./state.js";
+import { getAuth, getCartCount } from "./state.js";
 
 function setActiveNav() {
   const path = window.location.pathname.split("/").pop() || "index.html";
@@ -24,17 +24,5 @@ function renderHeaderState() {
   }
 }
 
-function bindResetButton() {
-  const resetBtn = document.querySelector("[data-testid='reset-state-btn']");
-  if (!resetBtn) return;
-  resetBtn.addEventListener("click", () => {
-    resetState();
-    renderHeaderState();
-    window.location.reload();
-  });
-}
-
-ensureSeedState();
 setActiveNav();
 renderHeaderState();
-bindResetButton();
