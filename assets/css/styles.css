@@ -59,6 +59,14 @@ body {
   font-size: 13px;
 }
 
+.header-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccd4e6;
+}
+
 .panel {
   background: #fff;
   border: 1px solid #d9deea;
