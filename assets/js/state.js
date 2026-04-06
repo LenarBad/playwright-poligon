@@ -23,12 +23,25 @@ function writeJSON(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
+function normalizeAuth(auth) {
+  const email = typeof auth?.email === "string" ? auth.email : "";
+  const role = typeof auth?.role === "string" ? auth.role : "guest";
+  const explicitLoggedIn = auth?.loggedIn === true;
+  const inferredLoggedIn = email.trim().length > 0 && role !== "guest";
+  return {
+    email,
+    role,
+    loggedIn: explicitLoggedIn || inferredLoggedIn
+  };
+}
+
 export function getAuth() {
-  return readJSON(STORAGE_KEYS.auth, DEFAULTS.auth);
+  const raw = readJSON(STORAGE_KEYS.auth, DEFAULTS.auth);
+  return normalizeAuth(raw);
 }
 
 export function setAuth(auth) {
-  writeJSON(STORAGE_KEYS.auth, auth);
+  writeJSON(STORAGE_KEYS.auth, normalizeAuth(auth));
 }
 
 export function getCart() {

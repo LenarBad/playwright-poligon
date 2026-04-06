@@ -81,6 +81,18 @@ body {
   font-size: 14px;
 }
 
+.toolbar fieldset {
+  border: 1px solid #b7c3db;
+  border-radius: 8px;
+  margin: 0;
+  padding: 8px 10px;
+}
+
+.toolbar fieldset legend {
+  font-size: 13px;
+  color: #2b3853;
+}
+
 input,
 select,
 button {
