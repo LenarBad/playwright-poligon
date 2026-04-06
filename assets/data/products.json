@@ -1,0 +1,14 @@
+[
+  { "id": "p-1001", "name": "NovaPhone X1", "category": "phone", "price": 69990, "inStock": true, "rating": 5 },
+  { "id": "p-1002", "name": "NovaPhone Lite", "category": "phone", "price": 39990, "inStock": true, "rating": 4 },
+  { "id": "p-1003", "name": "OrbitPhone Pro", "category": "phone", "price": 89990, "inStock": false, "rating": 5 },
+  { "id": "p-1004", "name": "SwiftBook 13", "category": "laptop", "price": 109990, "inStock": true, "rating": 4 },
+  { "id": "p-1005", "name": "SwiftBook 15", "category": "laptop", "price": 139990, "inStock": true, "rating": 5 },
+  { "id": "p-1006", "name": "WorkMate 14", "category": "laptop", "price": 79990, "inStock": false, "rating": 3 },
+  { "id": "p-1007", "name": "AirBuds S", "category": "accessory", "price": 9990, "inStock": true, "rating": 4 },
+  { "id": "p-1008", "name": "AirBuds Pro", "category": "accessory", "price": 14990, "inStock": true, "rating": 5 },
+  { "id": "p-1009", "name": "PowerBank 20000", "category": "accessory", "price": 4490, "inStock": true, "rating": 4 },
+  { "id": "p-1010", "name": "ChargeCable USB-C", "category": "accessory", "price": 990, "inStock": true, "rating": 3 },
+  { "id": "p-1011", "name": "GammaBook Air", "category": "laptop", "price": 124990, "inStock": true, "rating": 5 },
+  { "id": "p-1012", "name": "PocketPhone Mini", "category": "phone", "price": 29990, "inStock": true, "rating": 4 }
+]

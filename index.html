@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training App - Catalog</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <nav class="nav" aria-label="Main navigation">
+          <a data-nav href="index.html">Catalog</a>
+          <a data-nav href="login.html">Login</a>
+          <a data-nav href="cart.html">Cart</a>
+          <a data-nav href="profile.html">Profile</a>
+        </nav>
+        <div class="header-meta">
+          <span class="badge" data-testid="auth-status-badge">Guest</span>
+          <span class="badge">Cart: <strong data-testid="cart-count-badge">0</strong></span>
+          <button type="button" data-testid="reset-state-btn">Reset state</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h1>Catalog</h1>
+        <p class="muted">Static training app for Playwright Java course.</p>
+        <div class="toolbar">
+          <label>
+            Search
+            <input type="text" placeholder="Search products" data-testid="search-input" />
+          </label>
+          <label>
+            Category
+            <select data-testid="category-select">
+              <option value="all">All</option>
+              <option value="phone">Phone</option>
+              <option value="laptop">Laptop</option>
+              <option value="accessory">Accessory</option>
+            </select>
+          </label>
+          <label>
+            Sort
+            <select data-testid="sort-select">
+              <option value="relevance">Relevance</option>
+              <option value="price_asc">Price asc</option>
+              <option value="price_desc">Price desc</option>
+              <option value="name_asc">Name A-Z</option>
+            </select>
+          </label>
+          <label>
+            <span>In stock only</span>
+            <input type="checkbox" data-testid="in-stock-checkbox" />
+          </label>
+          <button type="button" data-testid="apply-filters-btn">Apply</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <p data-testid="loading-spinner">Loading products...</p>
+        <p data-testid="empty-state" hidden>No products found.</p>
+        <div class="grid" data-testid="products-grid"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/pages/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training App - Login</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <nav class="nav" aria-label="Main navigation">
+          <a data-nav href="index.html">Catalog</a>
+          <a data-nav href="login.html">Login</a>
+          <a data-nav href="cart.html">Cart</a>
+          <a data-nav href="profile.html">Profile</a>
+        </nav>
+        <div class="header-meta">
+          <span class="badge" data-testid="auth-status-badge">Guest</span>
+          <span class="badge">Cart: <strong data-testid="cart-count-badge">0</strong></span>
+          <button type="button" data-testid="reset-state-btn">Reset state</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h1>Login</h1>
+        <p class="muted">Demo credentials: student@example.com / learning123</p>
+        <p class="alert error" data-testid="login-error-alert" hidden></p>
+        <p class="alert success" data-testid="login-success-toast" hidden>Login successful.</p>
+        <form data-testid="login-form">
+          <label>
+            Email
+            <input type="email" data-testid="login-email-input" autocomplete="username" />
+          </label>
+          <br /><br />
+          <label>
+            Password
+            <input type="password" data-testid="login-password-input" autocomplete="current-password" />
+          </label>
+          <br /><br />
+          <button type="submit" data-testid="login-submit-btn">Sign in</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/pages/login.js"></script>
+  </body>
+</html>
