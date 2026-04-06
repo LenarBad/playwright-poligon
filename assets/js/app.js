@@ -30,7 +30,7 @@ function renderHeaderState() {
       headerAvatar.className = "header-avatar";
       headerAvatar.alt = "User avatar";
       headerAvatar.src = "./assets/images/profile_picture.png";
-      authBadge.insertAdjacentElement("afterend", headerAvatar);
+      authBadge.insertAdjacentElement("beforebegin", headerAvatar);
     }
     headerAvatar.hidden = !auth.loggedIn;
   }
