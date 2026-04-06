@@ -67,6 +67,16 @@ body {
   margin-bottom: 16px;
 }
 
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccd4e6;
+  display: block;
+  margin-bottom: 12px;
+}
+
 .toolbar {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
