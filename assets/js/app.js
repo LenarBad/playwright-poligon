@@ -22,16 +22,9 @@ function renderHeaderState() {
   const authBadge = document.querySelector("[data-testid='auth-status-badge']");
   if (authBadge) {
     authBadge.textContent = auth.loggedIn ? `Logged in: ${auth.email}` : "Guest";
-
-    let headerAvatar = document.querySelector("[data-testid='header-avatar']");
-    if (!headerAvatar) {
-      headerAvatar = document.createElement("img");
-      headerAvatar.setAttribute("data-testid", "header-avatar");
-      headerAvatar.className = "header-avatar";
-      headerAvatar.alt = "User avatar";
-      headerAvatar.src = "./assets/images/profile_picture.png";
-      authBadge.insertAdjacentElement("beforebegin", headerAvatar);
-    }
+  }
+  const headerAvatar = document.querySelector("[data-testid='header-avatar']");
+  if (headerAvatar) {
     headerAvatar.hidden = !auth.loggedIn;
   }
 
