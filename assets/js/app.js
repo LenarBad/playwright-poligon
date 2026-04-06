@@ -1,4 +1,4 @@
-import { getAuth, getCartCount } from "./state.js";
+import { getAuth, getCartCount, setAuth } from "./state.js";
 
 function setActiveNav() {
   const path = window.location.pathname.split("/").pop() || "index.html";
@@ -12,6 +12,8 @@ function setActiveNav() {
 }
 
 function renderHeaderState() {
+  const auth = getAuth();
+
   const cartBadge = document.querySelector("[data-testid='cart-count-badge']");
   if (cartBadge) {
     cartBadge.textContent = String(getCartCount());
@@ -19,8 +21,24 @@ function renderHeaderState() {
 
   const authBadge = document.querySelector("[data-testid='auth-status-badge']");
   if (authBadge) {
-    const auth = getAuth();
     authBadge.textContent = auth.loggedIn ? `Logged in: ${auth.email}` : "Guest";
+  }
+
+  const authNav = document.querySelector("[data-nav-auth]");
+  if (authNav) {
+    if (auth.loggedIn) {
+      authNav.textContent = "Logout";
+      authNav.setAttribute("href", "#");
+      authNav.onclick = (e) => {
+        e.preventDefault();
+        setAuth({ email: "", role: "guest", loggedIn: false });
+        window.location.href = "index.html";
+      };
+    } else {
+      authNav.textContent = "Login";
+      authNav.setAttribute("href", "login.html");
+      authNav.onclick = null;
+    }
   }
 }
 

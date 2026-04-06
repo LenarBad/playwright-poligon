@@ -21,7 +21,7 @@ function render() {
 
 logoutBtn.addEventListener("click", () => {
   setAuth({ email: "", role: "guest", loggedIn: false });
-  render();
+  window.location.href = "index.html";
 });
 
 render();
