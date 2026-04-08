@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Training App - Profile</title>
+    <title>Training App - Work Hours</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
@@ -32,25 +32,17 @@
 
     <main class="container">
       <section class="panel">
-        <h1>Profile</h1>
-        <p class="alert error" data-testid="auth-required-banner" hidden>
-          You must sign in first.
-        </p>
-        <div data-testid="profile-card" hidden>
-          <img
-            class="profile-avatar"
-            src="./assets/images/profile_picture.png"
-            alt="Profile picture"
-            data-testid="profile-avatar"
-          />
-          <p>Email: <strong data-testid="profile-email"></strong></p>
-          <p>Role: <strong data-testid="profile-role"></strong></p>
-          <button type="button" data-testid="logout-btn">Logout</button>
-        </div>
+        <h1>Work Hours</h1>
+        <p class="muted">The page requests work-hours data from a backend API.</p>
+
+        <p data-testid="work-hours-loading">Loading work hours...</p>
+        <p class="alert error" data-testid="work-hours-error" hidden>Information unavailable.</p>
+
+        <ul data-testid="work-hours-list" hidden></ul>
       </section>
     </main>
 
     <script type="module" src="./assets/js/app.js"></script>
-    <script type="module" src="./assets/js/pages/profile.js"></script>
+    <script type="module" src="./assets/js/pages/work-hours.js"></script>
   </body>
 </html>
